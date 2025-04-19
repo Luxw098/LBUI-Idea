@@ -1,4 +1,6 @@
-# littlebiggyui
+# LBUI-Idea
+
+(NodeJS should also work)
 
 To install dependencies:
 

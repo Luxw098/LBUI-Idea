@@ -1,0 +1,131 @@
+#overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-primary);
+}
+
+#container {
+    display: flex;
+}
+
+#page {
+    display: grid;
+    grid-auto-columns: 25% auto;
+    grid-template: "sidebar topbar"
+                 "x content";
+    background-color: var(--color-primary);
+}
+@media screen and (max-width: 530px) {
+    #page {
+        grid-auto-columns: 30% auto;
+        grid-template: "sidebar topbar"
+            "content content";
+    }
+    
+}
+
+#topbar, #sidebar {
+    display: flex;
+    padding: 10px;
+}
+.topbar_item, .sidebar_item {
+    background-color: var(--color-secondary);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px var(--color-shadow);
+}
+#user_nav {
+    height: 25%;
+}
+#general_nav {
+    height: 45%;
+}
+#extra_nav {
+    height: 30%;
+}
+
+#account {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.account_item {
+    font-size: min(3vw, 22px);
+}
+
+
+
+.user_nav_item {
+    font-size: min(2.5vw, 18px);
+}
+.general_nav_item {
+    font-size: min(5.25vw, 38px);
+}
+.extra_nav_item {
+    font-size: min(3.5vw, 24px);
+}
+
+
+
+#switcher {
+    padding: 10px;
+}
+.switcher_item {
+    background-color: var(--color-secondary);
+    border-radius: 5px;
+    font-size: min(1.5vw, 12px);
+    padding: 10px;
+}
+.switcher_item:hover {
+    text-decoration: none;
+}
+
+
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+.post_info {
+    margin-bottom: 5px;
+}
+.post_title {
+    max-width: 70%;
+    font-size: min(5vw, 32px);
+}
+.post_votes {
+    font-size: min(5vw, 32px);
+}
+.post_image {
+    max-width: 500px;
+    width: 98%;
+    border-radius: 10px;
+}
+.post_stats {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    font-size: min(4vw, 24px);
+    margin-top: 5px;
+}
+.post_subject_name, .post_subject_review {
+    font-size: min(4vw, 28px);
+}
+.post_sep {
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 5px var(--color-shadow);
+    height: 2px;
+}

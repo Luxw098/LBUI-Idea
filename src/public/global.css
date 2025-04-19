@@ -1,0 +1,63 @@
+:root {
+    /* Light Mode
+    --color-primary: #fff;
+    --color-secondary: #ddd;
+    --color-text: #666;
+    --color-shadow: #ffffff30;
+    */
+
+    /* Dark Mode
+    --color-primary: #222;
+    --color-secondary: #333;
+    --color-text: #eee;
+    */
+
+    --color-rd: #d33f3f;
+    --color-bl: #4c93b6;
+    --color-shadow: #00000030;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    margin: 0;
+    font-family: arial, helvetica, sans-serif;
+    overflow-wrap: anywhere;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: var(--color-bl);
+    text-align: start;
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+}
+
+button:hover {
+    transition: all 0.35s ease-in-out;
+    text-decoration: underline
+}
+button:active {
+    transition: all 0.1s ease-in-out;
+    color: var(--color-text);
+    transform: translateY(1px);
+}
+
+span {
+    color: var(--color-rd);
+}
+
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.gray {
+    color: var(--color-text);
+}
+
