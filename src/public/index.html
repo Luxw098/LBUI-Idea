@@ -12,16 +12,15 @@
     <div id="container">
         <div id="page">
             <div id="overlay"></div>
-            <div style="grid-area: sidebar;" id="sidebar">
-                <div class="sidebar_item" id="account">
+            <div style="grid-area: topbar;" id="topbar">
+                <div class="account_bar" id="account">
                     <button class="account_item" id="profile">TirednHigh</button>
+                    <div class="sep"></div>
                     <button class="account_item" id="chats"><span>2</span> chats</button>
                     <button class="account_item" id="orders"><span>1</span> order</button>
                     <button class="account_item" id="listings"><span>3</span> for sale</button>
                 </div>
-            </div>
-            <div style="grid-area: topbar;" id="topbar">
-                <div class="topbar_item" id="header">
+                <div class="nav_bar" id="header">
                     <div class="header_item" id="user_nav">
                         <button class="user_nav_item left" id="settings">settings</button>
                         <button class="user_nav_item left" id="theme" onclick="switch_theme()">switch theme</button>
@@ -29,6 +28,7 @@
                         <button class="user_nav_item right" id="logout">logout</button>
                         <button class="user_nav_item right" id="help">help</button>
                     </div>
+                    <div class="sep"></div>
                     <div class="header_item" id="general_nav">
                         <button class="general_nav_item" id="topics">topics</button>
                         <button class="general_nav_item" id="people">people</button>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div style="grid-area: content;" id="content">
-                <div class="post_sep"></div>
+                <div class="sep"></div>
                 <div class="post">
                     <div class="post_info">
                         <button class="post_title">Sample Data</button>
@@ -53,14 +53,14 @@
                     </div>
                     <div class="post_stats">
                         <a class="post_count"><span>0</span> posts on</a>
-                        <div id="post_subject">
+                        <div class="post_subject">
                             <button class="post_subject_name">Sample</button>
                             <button class="post_subject_review">10/10</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="post_sep"></div>
+                <div class="secondary sep"></div>
                 <div class="post">
                     <div class="post_info">
                         <button class="post_title">Longer titled Sample Data</button>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="post_stats">
                         <a class="post_count"><span>0</span> posts on</a>
-                        <div id="post_subject">
+                        <div class="post_subject">
                             <button class="post_subject_name">Longer Titled Sample</button>
                             <button class="post_subject_review">10/10</button>
                         </div>

@@ -1,35 +1,38 @@
 #overlay {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 1000vw;
+    height: 1000vh;
+    overflow: hidden;
     background-color: var(--color-primary);
-}
-
-#container {
-    display: flex;
 }
 
 #page {
     display: grid;
-    grid-auto-columns: 25% auto;
-    grid-template: "sidebar topbar"
+    width: 100%;
+    max-width: 550px;
+    grid-auto-columns: 15% 85%;
+    grid-template: "topbar topbar"
                  "x content";
     background-color: var(--color-primary);
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 550px) {
     #page {
-        grid-auto-columns: 30% auto;
-        grid-template: "sidebar topbar"
-            "content content";
+        grid-auto-columns: auto;
+        grid-template: "topbar"
+            "content";
     }
-    
+    #container {
+        justify-content: center;
+    }
 }
 
-#topbar, #sidebar {
+#topbar {
     display: flex;
     padding: 10px;
+    gap: 10px;
+    float: left;
 }
-.topbar_item, .sidebar_item {
+.nav_bar, .account_bar {
     background-color: var(--color-secondary);
     border-radius: 5px;
     padding: 15px;
@@ -51,19 +54,19 @@
     padding: 10px;
 }
 .account_item {
-    font-size: min(3vw, 22px);
+    font-size: min(3.5vw, 22px);
 }
 
 
 
 .user_nav_item {
-    font-size: min(2.5vw, 18px);
+    font-size: min(3vw, 18px);
 }
 .general_nav_item {
-    font-size: min(5.25vw, 38px);
+    font-size: min(5.5vw, 38px);
 }
 .extra_nav_item {
-    font-size: min(3.5vw, 24px);
+    font-size: min(4vw, 24px);
 }
 
 
@@ -74,7 +77,7 @@
 .switcher_item {
     background-color: var(--color-secondary);
     border-radius: 5px;
-    font-size: min(1.5vw, 12px);
+    font-size: min(2vw, 12px);
     padding: 10px;
 }
 .switcher_item:hover {
@@ -85,17 +88,14 @@
 
 
 #content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+    gap: 10px;
     margin-top: 10px;
     padding: 10px;
 }
 
 
 .post {
-    display: flex;
+    max-width: 450px;
     flex-direction: column;
 }
 .post_info {
@@ -105,27 +105,31 @@
     max-width: 70%;
     font-size: min(5vw, 32px);
 }
+.post_body {
+    text-align: center;
+}
 .post_votes {
     font-size: min(5vw, 32px);
+    float: right;
 }
 .post_image {
     max-width: 500px;
-    width: 98%;
+    width: min(90vw, 450px);
     border-radius: 10px;
 }
 .post_stats {
     margin-left: 15px;
     display: flex;
-    align-items: center;
-    text-align: right;
-    font-size: min(4vw, 24px);
+    justify-content: space-between;
     margin-top: 5px;
 }
-.post_subject_name, .post_subject_review {
+.post_stats * {
     font-size: min(4vw, 28px);
 }
-.post_sep {
-    background-color: var(--color-secondary);
-    box-shadow: 0 0 5px var(--color-shadow);
-    height: 2px;
+.post_count {
+    width: 30%;
+}
+.post_subject {
+    width: 70%;
+    text-align: right;
 }

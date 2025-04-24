@@ -1,14 +1,15 @@
 :root {
     /* Light Mode
     --color-primary: #fff;
-    --color-secondary: #ddd;
+    --color-secondary: #eee;
+    --color-trimary: #ddd;
     --color-text: #666;
-    --color-shadow: #ffffff30;
     */
 
     /* Dark Mode
     --color-primary: #222;
     --color-secondary: #333;
+    --color-trimary: #444;
     --color-text: #eee;
     */
 
@@ -22,7 +23,6 @@ body {
     color: var(--color-text);
     margin: 0;
     font-family: arial, helvetica, sans-serif;
-    overflow-wrap: anywhere;
 }
 
 button {
@@ -57,7 +57,23 @@ span {
     float: right;
 }
 
+.trimary {
+    background-color: var(--color-trimary) !important;
+}
+.secondary {
+    background-color: var(--color-secondary) !important;
+}
+.primary {
+    background-color: var(--color-primary) !important;
+}
+
 .gray {
     color: var(--color-text);
 }
 
+
+.sep {
+    background-color: var(--color-trimary);
+    margin: 5px 0;
+    height: 2px;
+}
